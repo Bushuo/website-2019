@@ -4,7 +4,7 @@
   "description": "Responisive Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recursive"
+    "sass": "node-sass -w scss/ -o dist/css --recursive --use-polling --polling-interval 1000"
   },
   "author": "Paul Buschmann",
   "license": "MIT",
