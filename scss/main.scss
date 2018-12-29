@@ -66,3 +66,31 @@ main {
         }
     }
 }
+
+// comming soon
+header {
+    width: 100%;
+    .entry-top {
+        height: 50vh;
+        background: $backgrnd-light;
+        @include easeOut();
+        &.slide {
+            transform: translate3d(0, -100%, 0);
+        }
+    }
+    .entry-bot {
+        height: 50vh;
+        background: $backgrnd-med;
+        @include easeOut();
+        &.slide {
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+}
+
+main {
+    h1 {
+        text-align: center;
+        margin-top: 50%;
+    }
+}

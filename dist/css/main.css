@@ -203,3 +203,22 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+header {
+  width: 100%; }
+  header .entry-top {
+    height: 50vh;
+    background: #7b6d8d;
+    transition: all 0.5s ease-out; }
+    header .entry-top.slide {
+      transform: translate3d(0, -100%, 0); }
+  header .entry-bot {
+    height: 50vh;
+    background: #593f62;
+    transition: all 0.5s ease-out; }
+    header .entry-bot.slide {
+      transform: translate3d(0, 100%, 0); }
+
+main h1 {
+  text-align: center;
+  margin-top: 50%; }
