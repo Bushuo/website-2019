@@ -1,5 +1,4 @@
 @import "config.scss";
-@import "mobile.scss";
 @import "menu.scss";
 * {
     box-sizing: border-box;
@@ -46,9 +45,11 @@ header {
 .text-secondary {
     color: $foregrnd-dark;
 }
+
 main {
     padding: 4rem;
-    height: 100%;
+    min-height: calc(100vh - 60px);
+
     .icons {
         margin-top: 1rem;
         a {
@@ -65,6 +66,53 @@ main {
             margin-top: 20vh;
         }
     }
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+        "bioimage bio bio"
+        "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-image {
+        width: 250px;
+        height: 250px;
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $foregrnd-light 5px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+    .job-2 {
+        grid-area: job2;
+    }
+    .job-3 {
+        grid-area: job3;
+    }
+
+    .job {
+        background: lighten($backgrnd-dark, 5);
+        padding: 0.5rem;
+        border-bottom: darken($backgrnd-light, 10) 5px solid;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($backgrnd-dark, 10);
+    color: $foregrnd-dark;
+    height: 60px;
 }
 
 // comming soon
@@ -98,3 +146,5 @@ main {
         }
     }
 }
+
+@import "mobile.scss";
