@@ -68,29 +68,33 @@ main {
 }
 
 // comming soon
-header {
-    width: 100%;
-    .entry-top {
-        height: 50vh;
-        background: $backgrnd-light;
-        @include easeOut();
-        &.slide {
-            transform: translate3d(0, -100%, 0);
+#soon {
+    header {
+        width: 100%;
+        .entry-top {
+            height: 50vh;
+            background: lighten($backgrnd-dark, 5);
+            @include easeOut();
+            &.slide {
+                transform: translate3d(0, -100%, 0);
+            }
+        }
+        .entry-bot {
+            height: 50vh;
+            background: darken($backgrnd-dark, 5);
+            @include easeOut();
+            &.slide {
+                transform: translate3d(0, 100%, 0);
+            }
         }
     }
-    .entry-bot {
-        height: 50vh;
-        background: $backgrnd-med;
-        @include easeOut();
-        &.slide {
-            transform: translate3d(0, 100%, 0);
-        }
-    }
-}
 
-main {
-    h1 {
-        text-align: center;
-        margin-top: 50%;
+    main {
+        padding: 0;
+        .soon {
+            text-align: center;
+            height: 100vh;
+            padding-top: 40vh;
+        }
     }
 }
