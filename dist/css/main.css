@@ -1,4 +1,48 @@
 /* Hex */
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main h1.lg-heading {
+    font-size: 5rem; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main h1.lg-heading {
+      font-size: 5rem; }
+    main span {
+      display: block; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  nav .menu-nav {
+    height: 75vh;
+    font-size: 1.5rem;
+    transform: translate3d(0, 100%, 0); }
+  nav .menu-branding {
+    height: 25vh;
+    transform: translate3d(0, -100%, 0); }
+    nav .menu-branding .portrait {
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main h1.lg-heading,
+  main h2.lg-heading {
+    font-size: 4rem; }
+  main h1.sm-heading,
+  main h2.sm-heading {
+    margin-top: 10vh; }
+  #home h1.lg-heading {
+    margin-top: 5vh; } }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -56,7 +100,8 @@
       width: 250px;
       height: 250px;
       background-image: url(../img/portrait.jpg);
-      border: solid 3px #fe5f55;
+      background-size: contain;
+      border: solid 5px #e63462;
       border-radius: 50%; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
