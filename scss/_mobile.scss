@@ -61,6 +61,34 @@
             }
         }
     }
+
+    #about {
+        .about-info {
+            grid-template-columns: 1fr;
+            grid-template-areas: "portrait" "bio";
+            .portrait {
+                margin-bottom: 2rem;
+            }
+            .bio {
+                width: 100%;
+            }
+        }
+    }
+
+    #work {
+        .projects {
+            grid-template-columns: 1fr;
+            grid-template-areas: "project1" "project2";
+
+            .proj {
+                margin: 1rem;
+                img {
+                    width: 70vw;
+                    height: 40vh;
+                }
+            }
+        }
+    }
 }
 
 // Smartphones
