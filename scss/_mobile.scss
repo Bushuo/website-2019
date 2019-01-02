@@ -20,7 +20,7 @@
         text-align: center;
         h1 {
             &.lg-heading {
-                font-size: 5rem;
+                font-size: 4.5rem;
             }
         }
         span {
@@ -94,13 +94,16 @@
 // Smartphones
 @include mediaSm {
     main {
+        padding: 2rem;
+        padding-top: 4rem;
         h1,
         h2 {
             &.lg-heading {
-                font-size: 4rem;
+                font-size: 2.8rem;
             }
             &.sm-heading {
                 margin-top: 10vh;
+                font-size: 2rem;
             }
         }
     }

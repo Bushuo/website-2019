@@ -132,7 +132,7 @@ h3 {
     font-size: 3rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(42, 55, 62, 0.5); }
+    background: rgba(46, 61, 68, 0.5); }
 
 a {
   color: #e63462;
@@ -166,7 +166,7 @@ main {
 #about {
   margin-top: 4rem;
   margin: 2rem;
-  height: 100vh; }
+  min-height: 100vh; }
   #about .about-info {
     text-align: left;
     display: grid;
@@ -188,7 +188,7 @@ main {
         margin-bottom: 1.5rem; }
 
 #work {
-  height: 100vh; }
+  min-height: 100vh; }
   #work .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -243,7 +243,7 @@ main {
     align-items: center;
     text-align: center; }
     main h1.lg-heading {
-      font-size: 5rem; }
+      font-size: 4.5rem; }
     main span {
       display: block; }
     main .lg-heading {
@@ -284,11 +284,15 @@ main {
         height: 40vh; } }
 
 @media screen and (max-width: 500px) {
-  main h1.lg-heading,
-  main h2.lg-heading {
-    font-size: 4rem; }
-  main h1.sm-heading,
-  main h2.sm-heading {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem;
+    padding-top: 4rem; }
+    main h1.lg-heading,
+    main h2.lg-heading {
+      font-size: 2.8rem; }
+    main h1.sm-heading,
+    main h2.sm-heading {
+      margin-top: 10vh;
+      font-size: 2rem; }
   #home h1.lg-heading {
     margin-top: 5vh; } }
