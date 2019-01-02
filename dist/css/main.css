@@ -147,7 +147,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 30px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -187,11 +187,12 @@ main {
     border-bottom: #625770 5px solid; }
 
 #main-footer {
+  font-size: 0.8rem;
   text-align: center;
-  padding: 1rem;
+  padding-top: 5px;
   background: #11171a;
   color: #e63462;
-  height: 60px; }
+  height: 30px; }
 
 #soon header {
   width: 100%; }
