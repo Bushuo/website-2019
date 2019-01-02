@@ -55,10 +55,8 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background-image: url(../img/portrait.jpg);
-      background-size: contain;
-      border: solid 5px #e63462;
-      border-radius: 50%; }
+      background-image: url(../img/pblogo.svg);
+      background-size: contain; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -265,8 +263,8 @@ main {
     height: 25vh;
     transform: translate3d(0, -100%, 0); }
     nav .menu-branding .portrait {
-      width: 150px;
-      height: 150px; }
+      width: 125px;
+      height: 125px; }
   #about .about-info {
     grid-template-columns: 1fr;
     grid-template-areas: "portrait" "bio"; }
