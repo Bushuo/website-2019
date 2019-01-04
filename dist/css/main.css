@@ -148,6 +148,9 @@ main {
   padding: 4rem;
   padding-bottom: 0;
   height: 100%; }
+  main img {
+    height: 100px;
+    width: 100px; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -158,8 +161,6 @@ main {
   main #home {
     overflow: hidden;
     min-height: 100vh; }
-    main #home h1 {
-      margin-top: 20vh; }
 
 #about {
   margin-top: 4rem;
@@ -193,7 +194,9 @@ main {
   #work .projects .proj {
     background: #2a373e; }
     #work .projects .proj img {
-      width: 40vw; }
+      width: auto;
+      height: auto;
+      max-width: 40vw; }
     #work .projects .proj .proj-title {
       font-size: 1.5rem;
       text-align: center;
@@ -296,10 +299,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-areas: "project1" "project2"; }
     #work .projects .proj {
-      margin: 1rem; }
-      #work .projects .proj img {
-        width: 70vw;
-        height: 40vh; } }
+      margin: 1rem; } }
 
 @media screen and (max-width: 500px) {
   main {

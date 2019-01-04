@@ -47,6 +47,11 @@ header {
     color: $foregrnd-dark;
 }
 main {
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
     padding: 4rem;
     padding-bottom: 0;
     height: 100%;
@@ -63,9 +68,6 @@ main {
     #home {
         overflow: hidden;
         min-height: 100vh;
-        h1 {
-            margin-top: 20vh;
-        }
     }
 }
 
@@ -109,7 +111,9 @@ main {
         .proj {
             background: lighten($backgrnd-dark, 2);
             img {
-                width: 40vw;
+                width: auto;
+                height: auto;
+                max-width: 40vw;
             }
             .proj-title {
                 font-size: 1.5rem;
