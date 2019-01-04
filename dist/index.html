@@ -56,13 +56,13 @@
                 <div class="about-info">
                     <div class="portrait"></div>
                     <div class="bio">
-                        <h3>I'm Paul Buschmann, a passionate Software Developer, currently studdying computer sience, living in Vienna, Austria.</h3>
-                        <p class="desc1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                             Dolore facilis numquam assumenda repellat eaque neque facere non maiores et ipsam.</p>
-                        <p class="desc2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Cumque, et? Saepe obcaecati rem amet nemo officia laudantium vel mollitia harum!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                             Dolor doloribus numquam velit, officia ad adipisci sint fugiat ex non aperiam.</p>
+                        <h3>I'm Paul Buschmann, a passionate Software Developer, currently studying Computer Science, living in Vienna, Austria.</h3>
+                        <p class="desc1">I got into programming out of curiosity at the age of 18. 
+                            I wanted to figure out what there is that keeps the games running which I play.</p>
+                        <p class="desc2">After high school, I studied at FH Salzburg with a major in Game Development. 
+                            It was there when I made my first experiences with C, C++ and C#. Since then I learned my way around engines like Unity3D and Unreal Engine 4.</p>
+                        <p>Lately I took an interest in Web Development and learned JavaScript. Where I work with node.js and React</p>
+                        <p>When I am not behind my screen, I also like cooking, talking korean to my beautiful girlfriend and traveling.</p>
                     </div>
                 </div>
             </div>
@@ -70,13 +70,24 @@
                 <h2 class="sm-heading">Projects</h2>
                 <div class="projects">
                     <div class="proj" id="project1">
+                        <a href="https://github.com/Bushuo/react-webapp"><img src="img/react_todolist.png"></a>
+                        <h3 class="proj-title">React Todo List</h3>
+                    </div>
+                    <!--<div class="proj" id="project2">
                         <a href="https://placeholder.com"><img src="https://via.placeholder.com/1080"></a>
                         <h3 class="proj-title">placeholder</h3>
-                    </div>
-                    <div class="proj" id="project2">
-                        <a href="https://placeholder.com"><img src="https://via.placeholder.com/1080"></a>
-                        <h3 class="proj-title">placeholder</h3>
-                    </div>
+                    </div>-->
+                </div>
+            </div>
+            <div id="contact">
+                <h2 class="sm-heading">Contact Me</h2>
+                <div class="contact-form" >
+                    <label for="subject">Subject</label>
+                    <input class="contact-subject fill" id="subject" placeholder="subject" type="text" />
+                    <label for="message">Message</label>
+                    <textarea rows="10" class="contact-message fill" id="message" placeholder="your message"></textarea>
+                    <button class="contact-button" onclick="sendMail()">Send</button>
+                    <button class="contact-button" onclick="resetInput()">Reset</button>
                 </div>
             </div>
         </main>
