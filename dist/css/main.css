@@ -145,7 +145,7 @@ header {
   color: #e63462; }
 
 main {
-  padding: 4rem;
+  padding: 6rem;
   padding-bottom: 0;
   height: 100%; }
   main img {
@@ -299,7 +299,9 @@ main {
     grid-template-columns: 1fr;
     grid-template-areas: "project1" "project2"; }
     #work .projects .proj {
-      margin: 1rem; } }
+      margin: 1rem; }
+  #contact .contact-form label {
+    text-align: left; } }
 
 @media screen and (max-width: 500px) {
   main {

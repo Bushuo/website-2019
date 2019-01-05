@@ -10,7 +10,18 @@ const DOMstrings = {
     linkHome: "#link-home",
     linkAbout: "#link-about",
     linkWork: "#link-work",
-    linkContact: "#link-contact"
+    linkContact: "#link-contact",
+    homeSection: "#home",
+    aboutSection: "#about",
+    workSection: "#work",
+    contactSection: "#contact"
+};
+
+const sectionHeights = {
+    home: 0,
+    about: 1000,
+    work: 1600,
+    contact: 2200
 };
 
 let showMenu = false;
@@ -29,7 +40,7 @@ const cLink = document.querySelector(DOMstrings.linkContact);
 const message = document.querySelector(DOMstrings.message);
 const subject = document.querySelector(DOMstrings.subject);
 
-toggleMenu = () => {
+let toggleMenu = () => {
     menuBtn.classList.toggle("close");
     menu.classList.toggle("show");
     menuNav.classList.toggle("show");
@@ -85,6 +96,32 @@ let smoothScroll = (targetSelector, duration) => {
     requestAnimationFrame(animation);
 };
 
+let handleCurrentLink = () => {
+    if (window.pageYOffset < sectionHeights.about) {
+        toggleCurrentLink(0);
+    } else if (
+        window.pageYOffset >= sectionHeights.about &&
+        window.pageYOffset < sectionHeights.work
+    ) {
+        toggleCurrentLink(1);
+    } else if (
+        window.pageYOffset >= sectionHeights.work &&
+        window.pageYOffset < sectionHeights.contact
+    ) {
+        toggleCurrentLink(2);
+    } else if (window.pageYOffset >= sectionHeights.contact) {
+        toggleCurrentLink(3);
+    }
+};
+
+let toggleCurrentLink = current => {
+    let kids = document.querySelector(DOMstrings.menuNav).children;
+    for (let i = 0; i < kids.length; i++) {
+        kids[i].classList.remove("current");
+    }
+    kids[current].classList.add("current");
+};
+
 const animTime = 1500;
 menuBtn.addEventListener("click", toggleMenu);
 hLink.addEventListener("click", () => {
@@ -98,4 +135,8 @@ wLink.addEventListener("click", () => {
 });
 cLink.addEventListener("click", () => {
     smoothScroll("#contact", animTime);
+});
+
+document.addEventListener("scroll", () => {
+    handleCurrentLink();
 });
