@@ -58,8 +58,44 @@ let resetInput = () => {
     subject.value = "";
 };
 
+let smoothScroll = (targetSelector, duration) => {
+    toggleMenu();
+    let target = document.querySelector(targetSelector);
+    let targetPos = target.getBoundingClientRect().top;
+    let startPosition = window.pageYOffset;
+    let startTime = null;
+
+    let animation = currentTime => {
+        if (startTime === null) {
+            startTime = currentTime;
+        }
+        let timeElapsed = currentTime - startTime;
+        let run = ease(timeElapsed, startPosition, targetPos, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    let ease = (t, sp, dis, dur) => {
+        t /= dur / 2;
+        if (t < 1) return (dis / 2) * t * t + sp;
+        t--;
+        return (-dis / 2) * (t * (t - 2) - 1) + sp;
+    };
+
+    requestAnimationFrame(animation);
+};
+
+const animTime = 1500;
 menuBtn.addEventListener("click", toggleMenu);
-hLink.addEventListener("click", toggleMenu);
-aLink.addEventListener("click", toggleMenu);
-wLink.addEventListener("click", toggleMenu);
-cLink.addEventListener("click", toggleMenu);
+hLink.addEventListener("click", () => {
+    smoothScroll("#pagetop", animTime);
+});
+aLink.addEventListener("click", () => {
+    smoothScroll("#about", animTime);
+});
+wLink.addEventListener("click", () => {
+    smoothScroll("#work", animTime);
+});
+cLink.addEventListener("click", () => {
+    smoothScroll("#contact", animTime);
+});
